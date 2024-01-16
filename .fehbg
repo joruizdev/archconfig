@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/developercode/.config/wallpaper/arch-linux-text-purple.png' 

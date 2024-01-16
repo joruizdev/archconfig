@@ -1,0 +1,5 @@
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+[user]
+	name = joruizdev
+	email = joruiz@developercode.dev

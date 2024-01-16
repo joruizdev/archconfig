@@ -1,0 +1,23 @@
+# Screens
+hdmi=`xrandr | grep ' connected' | grep 'HDMI' | awk '{print $1}'`
+
+if [ "$hdmi" = "HDMI-1" ]; then
+  xrandr --output HDMI-1 --primary --mode 3440x1440 --pos 276x1080 --output eDP-1 --off &
+fi
+
+
+# Composer
+picom &
+# Network
+nm-applet &
+# Keyboard Layout
+setxkbmap latam &
+# Automount Devices
+udiskie -t &
+# Java Fonts
+xsettingsd &
+# Wallpaper
+feh --bg-fill .config/wallpaper/arch-linux-text-purple.png &
+# Overlay Bar
+xob-pulse-py | xob -s pulse &
+xob-brightness-js | xob -s brightness &
